@@ -5,6 +5,72 @@
     <title>HTML 기본 구조 | Likelion Bootcamp</title>
   </head>
   <body>
-    ...
+    <xmp>
+    📘 DTD란?
+    DTD = Document Type Definition (문서 형식 정의)
+
+    간단히 말하면:
+
+    “이 HTML 문서는 어떤 규칙으로 작성되었는지 알려주는 선언문”
+
+    📌 HTML 문서 제일 위에 이런 거 본 적 있지?
+    
+    <!DOCTYPE html>
+    이게 바로 DTD 선언이야!
+    브라우저한테 말하는 거야:
+
+    “야 브라우저야, 이 문서는 이런 규칙으로 만들어졌어! 그 규칙대로 읽어줘~”
+
+    ✅ 왜 중요해?
+    브라우저가 어떤 버전의 HTML인지 알아야
+
+    제대로 화면에 보여줄 수 있기 때문이야!
+
+    📚 DTD의 종류
+    HTML 역사 속에서 여러 DTD가 있었어. 대표적인 것만 쉽게 정리해볼게!
+
+    🔹 1. HTML5 (현대 표준)
+    
+    <!DOCTYPE html>
+    엄청 간단하지?
+
+    최신 브라우저는 이거 하나만 있으면 돼!
+
+    문서가 HTML5로 작성되었음을 의미
+
+    🔹 2. HTML 4.01
+    (조금 오래된 HTML에서 사용함)
+
+    Strict (엄격한 버전)
+
+    
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+    Transitional (과도기 버전)
+
+    
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+    Frameset (프레임 사용 시)
+
+    
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
+    "http://www.w3.org/TR/html4/frameset.dtd">
+    👉 지금은 거의 안 써! HTML5가 더 간단하고 강력해서!
+
+    🔹 3. XHTML (XML 기반 HTML)
+    
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    HTML을 더 엄격하게, XML처럼 쓰고 싶을 때 사용했지만
+    요즘은 대부분 HTML5로 넘어옴!
+
+    ✅ 정리
+
+    이름	설명	현재 사용
+    HTML5	최신 표준, 간단한 <!DOCTYPE html>	✅ 적극 추천
+    HTML 4.01	오래된 표준, 길고 복잡한 DTD	❌ 거의 안 씀
+    XHTML	XML 스타일 HTML	❌ 거의 안 씀
+    </xmp>
   </body>
 </html>
