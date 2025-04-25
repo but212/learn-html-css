@@ -1,0 +1,38 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      # 필요하다면 빌드 관련 스텝 추가
+      # - name: Install dependencies (optional)
+      #   run: |
+      #     pip install -r requirements.txt
+
+      # - name: Run build script (optional)
+      #   run: |
+      #     python your_build_script.py
+
+      - name: Convert absolute paths to relative
+        run: |
+          python .github/script/convert_paths.py
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build  # 빌드 폴더명에 맞게 수정
