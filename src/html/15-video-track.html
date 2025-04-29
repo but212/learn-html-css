@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>video 관련 요소</title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <style>
+      body {
+        font-family: 'SUIT Variable', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <video controls muted poster="/src/assets/video/poster.jpg">
+      <source src="/src/assets/video/google-developer-stories.mp4" type="video/mp4" />
+      <track src="/src/assets/video/stories-ko.vtt" kind="captions" srclang="ko" label="한국어 캡션" />
+      <track src="/src/assets/video/stories-en.vtt" kind="captions" srclang="en" label="English Caption" />
+    </video>
+    <hr />
+    <video src="/src/assets/video/google-developer-stories.mp4" controls muted poster="/src/assets/video/poster.jpg">
+      <track src="/src/assets/video/google-developer-stories-subtitles-en.vtt" kind="captions" srclang="en" label="english caption"></track>
+    </video>
+  </body>
+</html>
