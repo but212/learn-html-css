@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>picture, source 요소</title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <style>
+      body {
+        font-family: 'SUIT Variable', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <img srcset="/src/assets/rwd/image-1x.png 1x, /src/assets/rwd/image-2x.png 2x, /src/assets/rwd/image-3x.png 3x, /src/assets/rwd/image-4x.png 4x" src="/src/assets/rwd/image-src.png" alt="" />
+    <img src="/src/assets/logo/netflix@1x.png" srcset="/src/assets/logo/netflix@1x.webp 1x, /src/assets/logo/netflix@2x.webp 2x" alt="" />
+    <hr />
+    <picture>
+      <source srcset="/src/assets/rwd/small-550.jpg 550w" media="(max-width: 500px)" />
+      <source srcset="/src/assets/rwd/medium-1024.jpg 1024w" media="(max-width: 1024px)" />
+      <source srcset="/src/assets/rwd/large-1600.jpg 1600w" media="(max-width: 1600px)" />
+      <img src="/src/assets/rwd/normal-1920.jpg" alt="" />
+    </picture>
+  </body>
+</html>
