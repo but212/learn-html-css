@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>map, area 요소</title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <style>
+      body {
+        font-family: 'SUIT Variable', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <img src="/src/assets/sprite/sns.png" usemap="#image-map" />
+
+    <map id="image-map">
+      <area target="_blank" rel="noopenner noreferrer" alt="페이스북" title="페이스북으로 이동" href="https://facebook.com" coords="15,15,15" shape="circle" />
+      <area target="_blank" rel="noopenner noreferrer" alt="인스타그램" title="인스타그램으로 이동" href="https://instagram.com" coords="64,15,15" shape="circle" />
+      <area target="_blank" rel="noopenner noreferrer" alt="유튜브" title="유튜브로 이동" href="https://youtub.com" coords="115,15,15" shape="circle" />
+    </map>
+  </body>
+</html>
