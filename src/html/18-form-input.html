@@ -20,14 +20,22 @@
     <h1>폼(input) 요소</h1>
 
     <form action="https://formspree.io/f/xeqwwbwk" method="POST">
+      <!-- 폼 관련 요소는 모두 1대1로 대응되는 레이블을 가져야 함 -->
       <!-- 한줄 글상자(검색어) - 검색어 입력서식 -->
       <!-- text: 텍스트 상자 -->
-      <!-- search: 검색어 상자 -->
-      <!-- 폼 관련 요소는 모두 1대1로 대응되는 레이블을 가져야 함 -->
       <div>
         <label for="">이름</label>
         <input type="text" id="userName" name="userName" />
       </div>
+
+      <!-- password: 비밀번호 입력 서식 -->
+      <div>
+        <label for="userPassword"
+          >비밀번호<input type="password" required name="userPassword" id="userPassword"
+        /></label>
+      </div>
+
+      <!-- search: 검색어 상자 -->
       <div>
         <label for="">검색어</label>
         <input
