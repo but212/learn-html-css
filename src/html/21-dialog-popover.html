@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dialog 요소와 popover 특성</title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <style>
+      body {
+        font-family: 'SUIT Variable', sans-serif;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+      /* dialog 요소의 backdrop에 그라데이션 배경 적용 */
+      #benefits-dialog::backdrop {
+        background: linear-gradient(to right, #ffcccb, #ccffcc);
+        opacity: 0.8; /* 선택적으로 투명도 조절 가능 */
+      }
+    </style>
+    <script type="module"></script>
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <button type="button" class="show-dialog" id="show-benefits">혜택 보기</button>
+    <button type="button" id="reset-dismissed" style="display: none">혜택 다시 보기</button>
+
+    <dialog
+      id="benefits-dialog"
+      aria-labelledby="surprise-benefits"
+      aria-describedby="surprise-benefits-details"
+    >
+      <h2 id="surprise-benefits">깜짝 혜택</h2>
+      <p id="surprise-benefits-details">
+        쉿! 고객님만을 위한 깜짝 할인 쿠폰 어제 빠뜨린 상품도 할인받고 내일 만나요!
+      </p>
+      <div>
+        <a href="/">쿠폰 확인하기</a>
+        <button type="button" class="dismiss-today" id="dismiss-today">오늘 하루 안보기</button>
+        <button type="button" class="close-dialog" id="close-dialog">닫기</button>
+      </div>
+    </dialog>
+
+    <script>
+      // 필요한 요소들 가져오기
+      const showButton = document.getElementById('show-benefits');
+      const resetButton = document.getElementById('reset-dismissed');
+      const dialog = document.getElementById('benefits-dialog');
+      const dismissButton = document.getElementById('dismiss-today');
+      const closeButton = document.getElementById('close-dialog');
+
+      // 로컬 스토리지에서 '오늘 하루 안보기' 설정 확인
+      const checkDismissed = () => {
+        const dismissedUntil = localStorage.getItem('dismissedUntil');
+        if (dismissedUntil && new Date(dismissedUntil) > new Date()) {
+          return true; // 아직 안보기 기간이 지나지 않음
+        }
+        return false;
+      };
+
+      // 버튼 표시 상태 업데이트
+      const updateButtonDisplay = () => {
+        if (checkDismissed()) {
+          showButton.style.display = 'none';
+          resetButton.style.display = 'block';
+        } else {
+          showButton.style.display = 'block';
+          resetButton.style.display = 'none';
+        }
+      };
+
+      // 페이지 로드 시 초기 상태 설정
+      document.addEventListener('DOMContentLoaded', () => {
+        updateButtonDisplay();
+      });
+
+      // 혜택 보기 버튼 클릭 시 다이얼로그 표시
+      showButton.addEventListener('click', () => {
+        dialog.showModal();
+      });
+
+      // 혜택 다시 보기 버튼 클릭 시
+      resetButton.addEventListener('click', () => {
+        // 로컬 스토리지에서 설정 제거
+        localStorage.removeItem('dismissedUntil');
+        updateButtonDisplay();
+      });
+
+      // 닫기 버튼 클릭 시 다이얼로그 닫기
+      closeButton.addEventListener('click', () => {
+        dialog.close();
+      });
+
+      // 오늘 하루 안보기 버튼 클릭 시
+      dismissButton.addEventListener('click', () => {
+        // 오늘 날짜 가져오기
+        const today = new Date();
+        // 내일 자정 설정
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        tomorrow.setHours(0, 0, 0, 0);
+
+        // 로컬 스토리지에 저장
+        localStorage.setItem('dismissedUntil', tomorrow.toISOString());
+
+        // 다이얼로그 닫기
+        dialog.close();
+
+        // 버튼 상태 업데이트
+        updateButtonDisplay();
+      });
+    </script>
+
+    <hr />
+
+    <!-- popover 속성 -->
+    <button type="button" popovertarget="popoverContent" class="button-popover">
+      팝오버 보기
+    </button>
+    <div popover id="popoverContent">
+      <p
+        >팝오버는 툴팁과 비슷한 UI 요소로, 추가적인 정보를 제공하거나 사용자와 상호작용할 수 있는
+        작은 창을 표시할 때 유용하다.</p
+      >
+    </div>
+  </body>
+</html>
