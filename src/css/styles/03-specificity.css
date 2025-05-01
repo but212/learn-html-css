@@ -1,0 +1,36 @@
+.wrapper {
+  color: green;
+  border: 1px dotted blue;
+}
+
+/* #container {
+  color: teal;
+} */
+
+.wrapper {
+  border: inherit;
+}
+
+p.ai {
+  color: purple;
+}
+
+.ai.copilot {
+  color: red;
+}
+
+p {
+  color: gray;
+}
+
+p {
+  color: orange;
+}
+
+p {
+  color: pink !important;
+}
+
+body {
+  color: red;
+}
