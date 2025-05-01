@@ -40,3 +40,45 @@ p {
 [title] {
   border: 1px solid black;
 }
+
+/* 자손 결합자 - Descendant combinator */
+div p {
+  border: 1px solid red;
+  padding: 10px;
+}
+
+div p .co-option {
+  color: green;
+}
+
+/* 자식 결합자 - Child combinator */
+ul > li {
+  border: 1px solid green;
+}
+
+/* 인접 형제 결합자 - Next-sibling combinator */
+h2 + p {
+  font-style: italic;
+}
+
+/* 일반 형제 결합자 - Subsequent-sibling combinator */
+h2 ~ p {
+  font-weight: 700;
+}
+
+/* 가상요소 선택자 */
+section {
+  border: 1px solid green;
+  padding: 20px;
+  margin: 20px;
+}
+
+section::before {
+  content: '멋쟁이 사자처럼';
+  color: red;
+}
+
+section::after {
+  content: '프론트엔드 부트캠프';
+  color: green;
+}
