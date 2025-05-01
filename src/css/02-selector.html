@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 선택자</title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/css/styles/02-selector.css" />
+    <style>
+      body {
+        font-family: 'SUIT Variable', sans-serif;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <h1>CSS 선택자</h1>
+    <h2>전체 선택자</h2>
+    <p>CSS에서 전체 선택자(*)는 모든 형태의 모든 요소를 선택하여 스타일을 적용할 수 있습니다</p>
+    <h2>요소 선택자</h2>
+    <p
+      >CSS에서 요소 선택자는 HTML 요소 이름 즉 태그명을 사용하여 선택하고 스타일을 적용할 수
+      있습니다.</p
+    >
+    <h2>클래스 선택자</h2>
+    <p class="like"
+      >CSS에서 클래스 선택자는 요소의 클래스 명을 선택하여 스타일을 적용할 수 있습니다.</p
+    >
+    <h2>아이디 선택자</h2>
+    <p id="lion"
+      >CSS에서 아이디 선택자는 요소의 아이디 명을 선택하여 스타일을 적용할 수 있습니다.</p
+    >
+    <h2 title="속성 선택자 예시">속성 선택자</h2>
+    <p title="속성 선택자 예시"
+      >속성 선택자는 요소의 속성의 유뮤나 속성 값의 조건에 따라 스타일을 적용할 수 있습니다.</p
+    >
+  </body>
+</html>
