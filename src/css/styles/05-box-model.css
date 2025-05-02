@@ -1,0 +1,23 @@
+/* 박스 모델 */
+/* block box */
+.lion {
+  background-color: #ffc;
+  border: 1px solid #333;
+
+  span {
+    background-color: #fcf;
+    display: block;
+    width: 5em;
+  }
+}
+
+.like {
+  background-color: #ccc;
+  display: inline;
+}
+
+.bootcamp {
+  background-color: #cfc;
+  display: inline-block;
+  width: 300px;
+}
