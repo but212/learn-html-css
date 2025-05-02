@@ -1,4 +1,12 @@
 /* 리스트 스타일링 */
+.likelion {
+  background-color: #fcf;
+
+  ol {
+    list-style-type: url('/src/assets/thumbnail/new.png');
+  }
+}
+
 .bootcamp {
   background-color: #ffc;
 
