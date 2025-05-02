@@ -1,0 +1,35 @@
+@import '/src/common/mini-reset.css';
+
+:root {
+  font-size: 10px; /* 1rem = 10px */
+
+  .lion {
+    font-size: 1.5rem;
+  }
+}
+
+/* 타이포그래피 및 단위 */
+/* 글자 크기 */
+/* em - 현재 글자크기에 비례함 */
+
+.lion {
+  .like {
+    font-size: 1.5em;
+  }
+}
+
+.bootcamp {
+  font-size: 20px;
+  .like {
+    font-size: 2rem;
+  }
+}
+
+.school {
+  font-weight: 700;
+  .like {
+    font-size: 2rem;
+    color: blue;
+    line-height: 1.5em;
+  }
+}
