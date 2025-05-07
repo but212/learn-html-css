@@ -1,0 +1,34 @@
+/* 중첩 예시 */
+.parent {
+  background-color: #f4a261;
+  padding: 20px;
+
+  .child {
+    color: white;
+    font-size: 16px;
+  }
+}
+
+/* 가상 요소 중첩 예시 */
+
+.button {
+  color: red;
+
+  &:hover {
+    background-color: yellow;
+  }
+
+  &::before {
+    content: '콘텐츠';
+  }
+}
+
+/* 중첩 미디어 쿼리 */
+.container {
+  width: 100%;
+  padding: 20px;
+
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+}
