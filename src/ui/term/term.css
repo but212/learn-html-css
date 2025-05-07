@@ -1,0 +1,57 @@
+/* 웹 관련 용어 - position 예제 */
+
+body {
+  margin: 50px;
+}
+
+/* 용어 컴포넌트 스타일 */
+.term {
+  padding-left: 76px;
+  position: relative;
+  min-height: 68px;
+
+  em {
+    color: #296897;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #181818;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* 용어 섹션 스타일링 */
+.term-section {
+  background: #ccc linear-gradient(#ccc, #eee);
+  border: 1px solid #555;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 16.25rem;
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .term {
+    margin-top: 1rem;
+
+    &:nth-of-type(even) {
+      padding-inline: 0 68px;
+
+      img {
+        left: initial;
+        right: 0;
+      }
+    }
+  }
+}
