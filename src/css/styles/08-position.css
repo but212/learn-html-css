@@ -24,7 +24,7 @@ h1 {
 /* absolute 값: 자신의 컨테이너 블록을 기준으로 배치 */
 .bootcamp {
   border: 1px solid blue;
-  position: fixed;
+  position: relative;
   span {
     background-color: rgb(255 255 80 /0.5);
     border: 1px solid black;
@@ -32,4 +32,10 @@ h1 {
     top: 20px;
     left: 0;
   }
+}
+
+.frontend {
+  background: var(--mint);
+  position: sticky;
+  top: 0;
 }
