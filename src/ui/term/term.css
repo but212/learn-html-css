@@ -1,57 +1,62 @@
-/* 웹 관련 용어 - position 예제 */
-
 body {
   margin: 50px;
 }
 
 /* 용어 컴포넌트 스타일 */
 .term {
-  padding-left: 76px;
   position: relative;
   min-height: 68px;
+  padding-left: 76px;
+  color: #181818;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
 
-  em {
-    color: #296897;
-    font-size: 0.875rem;
-    font-weight: 700;
-    line-height: 1.5;
-  }
+.term em {
+  color: #296897;
+  font-weight: 700;
+}
 
-  p {
-    font-size: 0.875rem;
-    line-height: 1.5;
-    color: #181818;
-  }
-
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+.term img {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* 용어 섹션 스타일링 */
 .term-section {
-  background: #ccc linear-gradient(#ccc, #eee);
+  background: linear-gradient(#ccc, #eee);
   border: 1px solid #555;
   border-radius: 0.5rem;
   padding: 1rem;
-  width: 16.25rem;
+  width: 16rem;
+}
 
-  h2 {
-    font-size: 1rem;
+.term-section h2 {
+  font-size: 1rem;
+}
+
+.term-section .term {
+  margin-top: 1rem;
+}
+
+.term-section .term:nth-of-type(even) {
+  padding-inline: 0 68px;
+}
+
+.term-section .term:nth-of-type(even) img {
+  left: auto;
+  right: 0;
+}
+
+/* 반응형 스타일 추가 */
+@media (max-width: 600px) {
+  .term {
+    padding-left: 50px;
+    min-height: 50px;
   }
 
-  .term {
-    margin-top: 1rem;
-
-    &:nth-of-type(even) {
-      padding-inline: 0 68px;
-
-      img {
-        left: initial;
-        right: 0;
-      }
-    }
+  .term-section {
+    width: 100%;
   }
 }

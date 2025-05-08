@@ -1,10 +1,9 @@
-/* float 레이아웃 */
 body {
   margin: 4rem;
 }
 
 figcaption {
-  font-size: 12px;
+  font-size: 0.75rem;
   text-align: center;
   margin-top: 0.5rem;
 }
@@ -14,7 +13,8 @@ picture {
   max-width: 14rem;
   border-radius: 4px;
   background-color: #efefef;
-  margin-inline: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .container {
@@ -22,27 +22,43 @@ picture {
     font-size: 1rem;
     font-weight: 400;
     color: #555;
+  }
 
-    span[lang] {
-      display: block;
-      color: black;
-      font-weight: 700;
-      font-size: 1.25rem;
-    }
+  .heading span[lang] {
+    display: block;
+    color: black;
+    font-weight: 700;
+    font-size: 1.25rem;
   }
 
   ul {
-    margin-top: 20px;
-    display: flow-root;
+    margin-top: 1.25rem;
+    display: flex;
     flex-wrap: wrap;
     padding: 0;
-    width: 80rem;
+    width: 100%;
+    gap: 1.25rem;
+    list-style: none;
+  }
 
-    li {
-      position: relative;
-      float: left;
-      margin-bottom: 1rem;
-      margin-right: 1.25rem;
-    }
+  li {
+    position: relative;
+  }
+}
+
+/* 반응형 지원 추가 */
+@media (max-width: 600px) {
+  body {
+    margin: 2rem;
+  }
+
+  img,
+  picture {
+    max-width: 10rem;
+  }
+
+  .container ul {
+    width: 100%;
+    gap: 1rem;
   }
 }
