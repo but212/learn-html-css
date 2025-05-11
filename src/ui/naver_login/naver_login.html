@@ -9,7 +9,7 @@
     <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
     <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
     <link rel="stylesheet" href="/src/common/index.css" />
-    <link rel="stylesheet" href="/src/ui" />
+    <link rel="stylesheet" href="/src/ui/naver_login/naver_login.css" />
     <style>
       body {
         font-family: 'SUIT Variable', sans-serif;
@@ -51,7 +51,10 @@
         </svg>
       </h1>
     </header>
-    <main></main>
-    <footer> </footer>
+    <main>
+      <form action="#" method="POST" class="login-form">
+        <input type="email" required name="userEmail" id="userEmail" placeholder="아이디(이메일)" />
+      </form>
+    </main>
   </body>
 </html>

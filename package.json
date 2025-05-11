@@ -4,6 +4,7 @@
     "format": "prettier . --check"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "live-server": "^1.2.2",
     "prettier": "^3.5.3"
   }
