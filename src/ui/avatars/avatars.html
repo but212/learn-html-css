@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아바타 (상태 디자인)</title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/ui/avatars/avatars.css" />
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <h1>아바타 (상태 디자인)</h1>
+    <hr />
+    <h2>인터렉션이 없는 아바타</h2>
+    <figure class="avatar-img">
+      <img src="/src/assets/face/face1.jpg" srcset="/src/assets/face/face1.webp" alt="사용자명" />
+      <figcaption class="status"><span class="sr-only">오프라인</span></figcaption>
+    </figure>
+    <figure class="avatar-img" style="--size: 80px">
+      <img src="/src/assets/face/face1.jpg" srcset="/src/assets/face/face1.webp" alt="사용자명" />
+      <figcaption class="status is-active"><span class="sr-only">온라인</span></figcaption>
+    </figure>
+
+    <hr />
+    <h2>인터렉션이 있는 아바타</h2>
+    <button aria-label="오프라인" class="avatar-button">
+      <img src="/src/assets/face/face5.jpg" srcset="/src/assets/face/face5.webp" alt="사용자명" />
+    </button>
+    <button aria-label="온라인" class="is-active avatar-button">
+      <img src="/src/assets/face/face5.jpg" srcset="/src/assets/face/face5.webp" alt="사용자명" />
+    </button>
+
+    <hr />
+    <h2>아바타 리스트</h2>
+    <div class="avatars-list">
+      <ul>
+        <li>
+          <button aria-label="오프라인" class="avatar-button">
+            <img
+              src="/src/assets/face/face1.jpg"
+              srcset="/src/assets/face/face1.webp"
+              alt="사용자명"
+            />
+          </button>
+        </li>
+        <li>
+          <button aria-label="온라인" class="is-active avatar-button">
+            <img
+              src="/src/assets/face/face2.jpg"
+              srcset="/src/assets/face/face2.webp"
+              alt="사용자명"
+            />
+          </button>
+        </li>
+        <li>
+          <button aria-label="오프라인" class="avatar-button">
+            <img
+              src="/src/assets/face/face3.jpg"
+              srcset="/src/assets/face/face3.webp"
+              alt="사용자명"
+            />
+          </button>
+        </li>
+        <li>
+          <button aria-label="온라인" class="is-active avatar-button">
+            <img
+              src="/src/assets/face/face4.jpg"
+              srcset="/src/assets/face/face4.webp"
+              alt="사용자명"
+            />
+          </button>
+        </li>
+        <li>
+          <button aria-label="오프라인" class="avatar-button">
+            <img
+              src="/src/assets/face/face5.jpg"
+              srcset="/src/assets/face/face5.webp"
+              alt="사용자명"
+            />
+          </button>
+        </li>
+        <li>
+          <button aria-label="온라인" class="is-active avatar-button">
+            <img
+              src="/src/assets/face/face6.jpg"
+              srcset="/src/assets/face/face6.webp"
+              alt="사용자명"
+            />
+          </button>
+        </li>
+        <li>
+          <button aria-label="오프라인" class="avatar-button">
+            <img
+              src="/src/assets/face/face7.jpg"
+              srcset="/src/assets/face/face7.webp"
+              alt="사용자명"
+            />
+          </button>
+        </li>
+        <li>
+          <button aria-label="온라인" class="is-active avatar-button">
+            <img
+              src="/src/assets/face/face8.jpg"
+              srcset="/src/assets/face/face8.webp"
+              alt="사용자명"
+            />
+          </button>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
