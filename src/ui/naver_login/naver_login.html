@@ -26,6 +26,7 @@
           height="44"
           viewBox="0 0 230 44"
           fill="none"
+          aria-label="네이버"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -53,7 +54,35 @@
     </header>
     <main>
       <form action="#" method="POST" class="login-form">
-        <input type="email" required name="userEmail" id="userEmail" placeholder="아이디(이메일)" />
+        <label for="user-email" class="sr-only">아이디 이메일 형식으로 입력해주세요</label>
+        <input
+          type="email"
+          required
+          name="user-email"
+          id="user-email"
+          placeholder="아이디(이메일)"
+        />
+        <label for="user-password" class="sr-only">비밀번호</label>
+        <input
+          type="password"
+          required
+          name="user-password"
+          id="user-password"
+          placeholder="비밀번호"
+        />
+        <div class="login-option">
+          <div class="login-state">
+            <input type="checkbox" name="login-state-hidden" id="login-state-hidden" />
+            <label for="login-state-checkbox" class="login-state-checkbox"></label>
+            <p class="checkbox-description">로그인 상태 유지</p>
+          </div>
+          <div class="login-ip-security">
+            <input type="checkbox" name="login-ip-hidden" id="login-ip-hidden" />
+            <label for="login-ip-security-checkbox" class="login-ip-security-checkbox"></label>
+            <a href="/" target="_blank" rel="noopener noreferrer">ip보안</a>
+          </div>
+        </div>
+        <button type="submit" class="login-button">로그인</button>
       </form>
     </main>
   </body>
