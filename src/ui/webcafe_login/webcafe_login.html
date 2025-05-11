@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹카페 로그인 - 폼 스타일링</title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/ui/webcafe-login/webcafe-login.css" />
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <h1>웹카페 로그인 - 폼 스타일링</h1>
+    <h2>컴포넌트 마크업</h2>
+    <div class="component-wrapper">
+      <!-- 입력서식 컴포넌트 -->
+      <div class="form-input">
+        <label for="formInput-0">레이블</label
+        ><input type="text" name="form-name" id="formInput-0" required placeholder="플레이스홀더" />
+      </div>
+      <!-- 버튼 컴포넌트 -->
+      <input class="outline-button" type="button" value="버튼텍스트" />
+      <button class="fill-button" type="button">버튼텍스트</button>
+      <!-- 하이퍼링크 컴포넌트  -->
+      <div class="icon-link">
+        <span class="fa-solid fa-chevron-right"></span>
+        <a href="/">링크텍스트</a>
+      </div>
+    </div>
+    <hr />
+    <h2>웹카페 로그인 폼</h2>
+    <div class="webcafe-login">
+      <h3 class="headline">로그인</h3>
+      <form action="/" method="GET">
+        <div class="form-input">
+          <label for="formInput-1">아이디</label
+          ><input
+            type="email"
+            name="userEmail"
+            id="formInput-1"
+            required
+            placeholder="euid@likelion.net"
+          />
+        </div>
+        <div class="form-input">
+          <label for="formInput-2">비밀번호</label
+          ><input
+            type="password"
+            name="userPassword"
+            id="formInput-2"
+            required
+            placeholder="8자리 이상"
+            minlength="8"
+          />
+        </div>
+        <button class="fill-button" type="submit">로그인</button>
+      </form>
+      <ul>
+        <li>
+          <div class="icon-link">
+            <span class="fa-solid fa-chevron-right"></span>
+            <a href="/">회원가입</a>
+          </div>
+        </li>
+        <li>
+          <div class="icon-link">
+            <span class="fa-solid fa-chevron-right"></span>
+            <a href="/">아이디 비밀번호 찾기</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
