@@ -13,12 +13,15 @@
   font-style: normal;
   font-weight: 300;
   src:
-    local("Noto Serif CJK KR"), local("Source Han Serif K"),
-    local("Source Han Serif"), local("Noto Serif CJK"), local("Noto Serif"),
+    local("Noto Serif CJK KR"),
+    local("Source Han Serif K"),
+    local("Source Han Serif"),
+    local("Noto Serif CJK"),
+    local("Noto Serif"),
     url(./web/NotoSerifCJKkr-Regular-subset.woff) format("woff"),
     url(./web/NotoSerifCJKkr-Regular-subset.woff2) format("woff2"),
     url(./web/NotoSerifCJKkr-Regular-subset.otf) format("otf"),
-    url(./web/NotoSerifCJKkr-Regular-subset.ttf) format("truetype"),;
+    url(./web/NotoSerifCJKkr-Regular-subset.ttf) format("truetype");
   /* Safari, Android, iOS */
 }
 @font-face {

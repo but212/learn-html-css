@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "live-server . --port=3000 --host=localhost --no-browser",
-    "format": "prettier . --check"
+    "format": "biome format --write .",
+    "lint": "pnpm biome lint --write ."
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
