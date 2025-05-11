@@ -1,0 +1,28 @@
+body {
+  margin: 50px;
+  color: white;
+  background-color: black;
+  font-size: clamp(1rem, 2.5, 2rem);
+
+  @media (width >= 320px) {
+    color: red;
+    background-color: black;
+  }
+
+  @media (width >= 768px) {
+    color: brown;
+    background-color: pink;
+  }
+
+  @media (width >= 1280px) {
+    color: purple;
+    background-color: lightgray;
+  }
+}
+
+h1 {
+  --spacing: 30px;
+  border: 1px solid currentColor;
+  width: calc(500px + var(--spacing) * 2);
+  padding: 25px;
+}
