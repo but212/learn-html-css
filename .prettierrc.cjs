@@ -1,9 +1,9 @@
 module.exports = {
   // 화살표 함수 식 매개변수 () 생략 여부
-  arrowParens: "always",
+  arrowParens: 'always',
 
   // HTML 태그 내부 공백 감도 설정 (CSS 스타일 기준)
-  htmlWhitespaceSensitivity: "strict",
+  htmlWhitespaceSensitivity: 'strict',
 
   // 닫는 괄호(>)을 다음 줄로 넘길지 여부
   bracketSameLine: false,
@@ -15,10 +15,10 @@ module.exports = {
   printWidth: 100,
 
   // Markdown 및 기타 서식 문서 래핑 설정
-  proseWrap: "always",
+  proseWrap: 'always',
 
   // 객체 속성 key 값에 인용 부호 사용 여부 ('as-needed'는 필수적인 경우만 사용)
-  quoteProps: "consistent",
+  quoteProps: 'consistent',
 
   // 세미콜론(;) 사용 여부 (세미콜론을 생략해도 문제없는 환경에서는 false 설정 가능)
   semi: true,
@@ -29,8 +29,36 @@ module.exports = {
   // 들여쓰기 크기 (2칸이 일반적이나, 팀 내 스타일에 따라 조정 가능)
   tabWidth: 2,
 
+  // 자바스크립트 파일에서 import/export 문을 자동으로 정렬
+  importOrder: ['<THIRD_PARTY_MODULES>', '<SIDE_EFFECTS>', '<RELATIVE_MODULES>'],
+  importOrderTypeScript: true,
+
+  // 줄바꿈 문자 사용 (LF: Unix, CRLF: Windows)
+  endOfLine: 'lf',
+
+  // 파일의 마지막에 빈 줄 추가
+  trailingComma: 'es5',
+
+  // 주석의 들여쓰기 방식
+  embeddedLanguageFormatting: 'auto',
+
+  // HTML에서 자동으로 줄바꿈 추가
+  htmlEndTagsOnNewLine: true,
+
+  // CSS에서 속성 정렬 방식
+  css: {
+    bracketSpacing: true,
+    singleQuote: true,
+  },
+
+  // SCSS/SASS 설정
+  scss: {
+    bracketSpacing: true,
+    singleQuote: true,
+  },
+
   // 객체 마지막 속성 선언 후 콤마 추가 여부 (es5 스타일을 유지)
-  trailingComma: "all",
+  trailingComma: 'all',
 
   // 탭 대신 스페이스 사용 여부
   useTabs: false,

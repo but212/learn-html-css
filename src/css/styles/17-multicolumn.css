@@ -1,0 +1,32 @@
+body {
+  margin: 50px;
+}
+
+.container {
+  background-color: yellow;
+}
+
+.case-1 {
+  column-rule: 1.5px dotted red;
+  column-width: 200px;
+}
+
+.case-2 {
+  column-count: 3;
+  column-rule: 1.5px dotted green;
+  column-gap: 2em;
+}
+
+.case-3 {
+  columns: 200px 3;
+  background: lightgreen;
+
+  span {
+    font-size: 1.5rem;
+    color: #fff;
+    background: darkblue;
+    display: block;
+    column-span: all;
+    margin-block: 0.5em;
+  }
+}

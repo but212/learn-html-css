@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>검색 바 (SearchBar - 폼 스타일링)</title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/ui/search-bar/search-bar.css" />
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <h1>검색 바 (SearchBar - 폼 스타일링)</h1>
+    <h2>로고 이미지</h2>
+    <!-- svg 요소 -->
+    <figure class="logo">
+      <svg aria-labelledby="logo" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H8L15.5 12V0H24V24H15.1875L8 12.5L8 24H0V0Z" fill="url(#paint0_linear_4252_3)"/>
+        <defs>
+        <linearGradient id="paint0_linear_4252_3" x1="4.5" y1="-1.93715e-07" x2="20.5" y2="24" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1BF008"/>
+        <stop offset="1" stop-color="#03CCA8"/>
+        </linearGradient>
+        </defs>
+      </svg>
+      <figcaption id="logo" class="sr-only">네이버</figcaption>  
+    </figure>
+    <!-- 텍스트 -->
+    <em class="text-logo">
+      <span aria-hidden="true" class="text">n</span>
+      <span class="sr-only">네이버</span>
+    </em>
+    <hr />
+    <h2>입력 서식 컴포넌트</h2>
+    <!-- 레이블 표시 -->
+    <div class="form-input">
+      <label for="input-0">레이블</label><input type="text" id="input-0" name="input" 
+      required placeholder="입력 서식 힌트" />
+    </div>
+    <hr />
+    <!-- 레이블 숨김 -->
+    <div class="form-input">
+      <label for="input-0" class="sr-only">레이블</label><input type="text" id="input-0" name="input" 
+      required placeholder="입력 서식 힌트" />
+    </div>
+    <hr />
+    <!-- 레이블 숨김 (상태 디자인) -->
+    <div class="form-input like-lion">
+      <label for="input-0" class="sr-only">레이블</label>
+      <input type="text" id="input-0" name="input" 
+      required placeholder="입력 서식 힌트" />
+    </div>
+    <hr />
+    <h2>버튼 컴포넌트</h2>
+    <!-- 비활성 버튼 -->
+    <button type="button" disabled>버튼</button>
+    <!-- 그라디언트 버튼 -->
+    <button class="circle-button" type="button" aria-label="레이블"></button>
+    <hr />
+    <h2>검색 바</h2>
+    <div class="search-bar">
+      <a href="/" title="홈으로 이동">
+        <figure class="logo">
+          <svg aria-labelledby="logo" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H8L15.5 12V0H24V24H15.1875L8 12.5L8 24H0V0Z" fill="url(#paint0_linear_4252_3)"/>
+            <defs>
+            <linearGradient id="paint0_linear_4252_3" x1="4.5" y1="-1.93715e-07" x2="20.5" y2="24" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#1BF008"/>
+            <stop offset="1" stop-color="#03CCA8"/>
+            </linearGradient>
+            </defs>
+          </svg>
+          <figcaption id="logo" class="sr-only">네이버</figcaption>  
+        </figure>
+      </a>
+      <form action="/" method="GET">
+        <div class="form-input">
+          <label for="input-1" class="sr-only">검색어</label><input type="search" id="input-1" name="keyword" required placeholder="검색어를 입력해주세요." />
+        </div>
+        <button class="circle-button" type="submit" aria-label="검색"></button>
+      </form>
+    </div>
+  </body>
+</html>

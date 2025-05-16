@@ -1,0 +1,150 @@
+body {
+  margin: 50px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+  grid-auto-rows: 18.75rem;
+  gap: 1.25rem;
+}
+
+.case {
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+@keyframes zoom {
+  from {
+    width: 100px;
+    background: yellow;
+  }
+
+  50% {
+    width: 200px;
+    background: pink;
+  }
+
+  to {
+    width: 100px;
+    background: yellow;
+  }
+}
+
+/* 애니메이션 속성 합습을 위한 예제 */
+.zoom .target-animation {
+  border: 5px solid currentColor;
+  padding: 10px;
+  width: 100px;
+  /* animation-name: zoom;
+  animation-duration: 5s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  animation-play-state: paused; */
+  animation: zoom 5s 1s 3 alternate ease-in-out forwards paused;
+}
+
+.case .target-animation {
+  border-radius: 0.5rem;
+  inline-size: 80%;
+  padding: 1em;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--dark-blue);
+  color: white;
+  text-align: center;
+  margin-block: 15px;
+  padding: 1em;
+}
+
+/* Fade 애니메이션 */
+.fade .target-animation {
+  animation: fade 3s infinite linear;
+  animation-play-state: paused;
+}
+
+/* Shrink 애니메이션 */
+.shrink .target-animation {
+  animation: shrink 3s infinite ease-in-out;
+  animation-play-state: paused;
+}
+
+/* Bounce 애니메이션 */
+.bounce .target-animation {
+  animation: bounce 3s infinite ease-in-out alternate;
+  animation-play-state: paused;
+}
+
+/* shake 애니메이션 */
+.shake .target-animation {
+  animation: shake 3s infinite ease-in-out;
+  animation-play-state: paused;
+}
+
+/* spin 애니메이션 */
+.spin .target-animation {
+  width: 100px;
+  aspect-ratio: 1;
+  background: conic-gradient(red 0% 25%, orange 25% 50%, black 50% 75%, green 75% 100%);
+  border-radius: 50%;
+  animation: spin 3s infinite linear;
+  animation-play-state: paused;
+}
+
+/* pulse 애니메이션 */
+.pulse .target-animation {
+  animation: pulse 3s infinite ease-in-out;
+  animation-play-state: paused;
+}
+
+.flip {
+  perspective: 500px;
+  perspective-origin: top;
+  .target-animation {
+    animation: flip 3s infinite ease-in-out;
+    animation-play-state: paused;
+  }
+}
+
+.wobble {
+  .target-animation {
+    animation: wobble 3s infinite ease-in-out;
+    animation-play-state: paused;
+  }
+}
+
+.rotate-border .target-animation {
+  --rotation: 0deg;
+  position: relative;
+  inline-size: 120px;
+  aspect-ratio: 1;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 50% auto auto 50%;
+    z-index: -1;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    translate: -50% -50%;
+    border-radius: 0.5rem;
+    animation: rotate 500ms infinite linear paused;
+    background: conic-gradient(
+      from var(--rotation),
+      var(--pink),
+      var(--purple),
+      var(--blue),
+      var(--green),
+      var(--yellow),
+      var(--pink)
+    );
+  }
+
+  &::before {
+    filter: blur(10px);
+  }
+}

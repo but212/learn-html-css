@@ -1,0 +1,39 @@
+/* 이디야 새소식(News) */
+body {
+  margin: 50px;
+  margin: clamp(20px, 5vw, 50px);
+}
+
+.news {
+  color: var(--ivory);
+  margin-block: 20px;
+  background: var(--dark-blue);
+  padding: 20px;
+  max-inline-size: 40rem;
+  min-inline-size: 20rem;
+  display: grid;
+  gap: 5px 20px;
+  grid-template-columns: minmax(190px, 1fr) max-content;
+
+  border-radius: 8px;
+
+  line-height: 1.6;
+
+  .title {
+    margin-bottom: 10px;
+
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .list,
+  .item {
+    display: contents;
+  }
+
+  .more {
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: end;
+  }
+}

@@ -1,0 +1,67 @@
+/* 그리드 테이블 */
+:root {
+  --main-color: #000;
+  --sub-color: #fff;
+  --color-border: #aaa;
+  --color-border-strong: #fff;
+  --spacing-lg: 3.125rem;
+  --spacing-md: 1.25rem;
+  --spacing-sm: 10px;
+  --font-size-base: .875rem;
+}
+
+body {
+  margin: var(--spacing-lg);
+  background: var(--main-color);
+  color: var(--sub-color);
+  line-height: 1.6;
+}
+
+.grid-table {
+  border-block: 2px solid var(--color-border-strong);
+  margin-block: var(--spacing-md);
+  font-size: var(--font-size-base);
+  min-inline-size: 320px;
+  padding: var(--spacing-sm);
+  display: grid;
+  grid-template-columns: minmax(max-content, 1fr) minmax(max-content, 3fr) minmax(
+      max-content,
+      1fr
+    ) minmax(max-content, 1fr);
+  grid-template-rows: repeat(3, 48px) auto;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: auto;
+  transition: box-shadow .2s;
+
+  & > * {
+    border-bottom: 1px solid var(--color-border);
+    align-content: center;
+    padding-inline: var(--spacing-sm);
+    padding-block: 4px;
+  }
+
+  & > :last-child {
+    grid-area: 4 / 2 / 5 / span 3;
+    border-bottom: 0;
+  }
+
+  & > :is(dd, div):last-child {
+    & > span {
+      display: block;
+      margin-block: var(--spacing-sm);
+    }
+  }
+
+  &:focus-within {
+    box-shadow: 0 0 0 2px var(--color-border-strong);
+  }
+
+  &:hover,
+  &:focus {
+    & > * {
+      background: rgba(255, 255, 255, 0.07);
+      outline: none;
+    }
+  }
+}

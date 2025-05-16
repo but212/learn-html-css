@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/styles/19-animation.css" />
+    <title>CSS 애니메이션</title>
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지로 이동</a>
+    <h1>CSS 애니메이션</h1>
+    <hr />
+    <button type="button" class="toggle-transition">실행</button>
+    <div class="like"> CSS 애니메이션(Transition) </div>
+    <script>
+      document.querySelector('.toggle-transition').addEventListener('click', function () {
+        document.querySelector('.like').classList.toggle('transition');
+      });
+    </script>
+  </body>
+</html>
